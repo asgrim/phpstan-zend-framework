@@ -1,0 +1,28 @@
+language: php
+
+before_script:
+  - rm composer.lock
+  - travis_retry composer update --prefer-dist $DEPENDENCIES
+
+jobs:
+  include:
+    - stage: Test on PHP 7.0
+      php: 7.0
+      env: DEPENDENCIES=""
+      script: ./test.sh
+    - stage: Test on PHP 7.0 (lowest deps)
+      php: 7.0
+      env: DEPENDENCIES="--prefer-lowest --prefer-stable"
+      script: ./test.sh
+    - stage: Test on PHP 7.1
+      php: 7.1
+      env: DEPENDENCIES=""
+      script: ./test.sh
+    - stage: Test on PHP 7.1 (lowest deps)
+      php: 7.1
+      env: DEPENDENCIES="--prefer-lowest --prefer-stable"
+      script: ./test.sh
+
+cache:
+  directories:
+    - $HOME/.composer/cache

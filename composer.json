@@ -1,0 +1,30 @@
+{
+    "name": "asgrim/phpstan-zend-framework",
+    "description": "PHPStan extension for Zend Framework and Expressive",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Titcumb",
+            "email": "james@asgrim.com"
+        }
+    ],
+    "require": {
+        "php": "~7.0, ~7.1",
+        "phpstan/phpstan": "^0.9"
+    },
+    "require-dev": {
+        "zendframework/zend-inputfilter": "^2.8",
+        "psr/http-message": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Asgrim\\PhpStanZendFramework\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AsgrimTest\\PhpStanZendFramework\\Fixture\\": "test/fixture/"
+        }
+    }
+}

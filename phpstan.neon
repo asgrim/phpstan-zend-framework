@@ -1,0 +1,5 @@
+services:
+	-
+		class: Asgrim\PhpStanZendFramework\InputFilterToAcceptParsedBodyExtension
+		tags:
+			- phpstan.broker.dynamicMethodReturnTypeExtension
