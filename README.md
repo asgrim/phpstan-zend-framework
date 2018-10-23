@@ -8,7 +8,7 @@ phpstan 0.10 support comes later (because legacy...)
 
 ## Usage
 
-First, `composer require asgrim/phpstan-zend-framework`
+First, `composer require --dev asgrim/phpstan-zend-framework`
 
 Then add to `phpstan.neon`:
 
